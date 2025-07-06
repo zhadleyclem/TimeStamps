@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Audio Player App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Audio Player</h1>
+        
+        <input type="file" id="audioFile" accept="audio/*" class="file-input">
+        
+        <div id="fileName" class="file-name"></div>
+        
+        <audio id="audioPlayer" preload="metadata"></audio>
+        
+        <div class="progress-bar" id="progressBar">
+            <div class="progress-fill" id="progressFill"></div>
+        </div>
+        
+        <div class="time-display" id="timeDisplay">00:00 / 00:00</div>
+        
+        <div class="controls">
+            <button id="rewindBtn" disabled>⏪ Rewind 5s</button>
+            <button id="playPauseBtn" class="play-pause-btn" disabled>▶️ Play</button>
+            <button id="forwardBtn" disabled>⏩ Forward 5s</button>
+        </div>
+        
+        <div class="playlist">
+            <div class="playlist-title">Playlist (0 titles)</div>
+            <div id="playlistItems"></div>
+        </div>
+        
+        <div class="add-title-section">
+            <h3>Add New Title</h3>
+            <p>Enter a title name and click Add to create a bookmark at the current time position</p>
+            <input type="text" id="titleInput" placeholder="Enter title name (e.g., 'Intro', 'Verse 1')" disabled>
+            <button id="addTitleBtn" disabled>Add Title</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
